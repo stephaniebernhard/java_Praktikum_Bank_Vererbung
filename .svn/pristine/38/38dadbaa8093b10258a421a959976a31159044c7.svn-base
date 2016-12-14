@@ -1,0 +1,30 @@
+
+public class Salaerkonto extends Bankkonto {
+	
+	private int ueberzugslimite;
+	
+	public Salaerkonto (String name, int betrag) {
+		super(name, betrag);
+		ueberzugslimite = 1000000;
+	}
+	
+	public Salaerkonto (String name, int betrag, int ueberzugslimite){
+		super(name, betrag);
+		this.ueberzugslimite = ueberzugslimite;
+	}
+	
+	public void abheben(double betrag){
+		int rappen = betragInRappen(betrag);
+		if (rappen>=0) {
+			if ((kontostand - rappen) < -ueberzugslimite){
+				rappen = kontostand + ueberzugslimite;
+				System.out.println("Das Konto kann um maximal " + betragInChf(ueberzugslimite)+ " CHF überzogen werden.");
+				System.out.println("Es wurden daher nur " + betragInChf(rappen) + "CHF abgehoben.");
+			}
+			kontostand = kontostand - rappen;
+		}
+		else {
+			System.out.println("Es können nur positive Beträge einbezahlt werden.");
+		}
+	}
+}

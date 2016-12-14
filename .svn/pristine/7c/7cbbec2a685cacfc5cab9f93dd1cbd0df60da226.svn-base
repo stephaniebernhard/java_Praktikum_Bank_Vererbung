@@ -1,0 +1,49 @@
+
+public class Bankkonto {
+	
+	protected String name;
+	protected int kontostand;
+	protected int maximalbetrag = 10000000; //evtl. static?
+	
+	public Bankkonto(String name, double ersteinlage){
+		this.name = name;
+		this.kontostand = betragInRappen(ersteinlage);
+	}
+	
+	public void einzahlen(double betrag){
+		int rappen = betragInRappen(betrag);
+		System.out.println(rappen);
+		if (rappen >= 0) {
+			if ((kontostand + rappen) > maximalbetrag){
+				rappen = maximalbetrag - kontostand;
+				System.out.println("Maximalbetrag des Kontos = " + betragInChf(maximalbetrag) + " CHF");
+				System.out.println("Es wurden daher nur " + betragInChf(rappen) + " CHF einbezahlt.");
+			}
+			kontostand = kontostand + rappen;
+		}
+		else {
+			System.out.println("Es können nur positive Beträge einbezahlt werden.");
+		}
+	}
+	
+	public void abheben(double betrag){
+		
+	}
+	
+	public double betragInChf(int betrag){
+		return (double) (betrag / 100.0);
+	}
+	
+	public int betragInRappen(double betrag){
+		return (int) (betrag * 100);
+	}
+	
+	public double gibKontostand(){
+		return betragInChf(kontostand);
+	}
+	
+	public void zeigeKontostand(){
+		System.out.println(gibKontostand());
+	}
+	
+}

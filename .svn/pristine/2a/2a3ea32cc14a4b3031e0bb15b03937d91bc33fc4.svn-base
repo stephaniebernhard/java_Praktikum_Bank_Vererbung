@@ -1,0 +1,15 @@
+
+public class Test {
+
+	public static void main(String[] args) {
+		Nummernkonto k1 = new Nummernkonto("Stephanie", 5000);
+		k1.zeigeKontonummer();
+		Nummernkonto k2 = new Nummernkonto("Lino", 100);
+		k2.zeigeKontonummer();
+		Nummernkonto k3 = new Nummernkonto("Archie", 0);
+		k3.zeigeKontonummer();
+		
+
+	}
+
+}

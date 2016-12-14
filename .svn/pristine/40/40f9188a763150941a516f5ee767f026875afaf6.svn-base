@@ -1,0 +1,9 @@
+
+public class Salaerkonto extends Bankkonto {
+	
+	private int ueberzugslimite = 1000000;
+	
+	public Salaerkonto (String name, int betrag) {
+		super(name, betrag);
+	}
+}

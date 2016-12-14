@@ -1,0 +1,29 @@
+
+public class Test {
+
+	public static void main(String[] args) {
+		Nummernkonto k1 = new Nummernkonto("Stephanie", 5000);
+		Nummernkonto k2 = new Nummernkonto("Lino", 100);
+		Nummernkonto k3 = new Nummernkonto("Archie", 0);
+		Bankkonto k4 = new Bankkonto ("Stephanie", 200);
+		Salaerkonto k5 = new Salaerkonto ("Lino", -200);
+		k1.zeigeKontoInfos();
+		k2.zeigeKontoInfos();
+		k3.zeigeKontoInfos();
+		k4.zeigeKontoInfos();
+		k5.zeigeKontoInfos();
+		k1.einzahlen(200000);
+		k2.einzahlen(-20);
+		k3.abheben(20);
+		k3.einzahlen(500);
+		k4.abheben(5000);
+		k4.einzahlen(10000);
+		k5.abheben(1000);
+		k1.zeigeKontoInfos();
+		k2.zeigeKontoInfos();
+		k3.zeigeKontoInfos();
+		k4.zeigeKontoInfos();
+		k5.zeigeKontoInfos();
+	}
+
+}

@@ -1,0 +1,27 @@
+import java.util.*;
+
+public class Bank {
+	
+	ArrayList<Bankkonto> verwalteteKonti = new ArrayList<Bankkonto>();
+	
+	public Bank(){
+		verwalteteKonti.add(new Nummernkonto("Kisuke", 5000));
+		verwalteteKonti.add(new Nummernkonto("Shiro", 100));
+		verwalteteKonti.add(new Nummernkonto("Sakura"));
+		verwalteteKonti.add(new Bankkonto ("Shinpachi", 200));
+		verwalteteKonti.add(new Salaerkonto ("Gintama", -200));
+		verwalteteKonti.add(new Bankkonto ("Haruka"));
+		verwalteteKonti.add(new Salaerkonto ("Totoro"));
+		
+	}
+	
+	public void alleKontiAusgeben(){
+		for (Bankkonto konto : verwalteteKonti){
+			konto.zeigeKontoInfos();
+		}
+	}
+	
+	public void kontoHinzufuegen(String name){
+		
+	}
+}

@@ -1,0 +1,12 @@
+
+public class Nummernkonto extends Bankkonto {
+
+	private int kontonummer;
+	private int anzahlkonten = 0;
+	
+	public Nummernkonto(String name, int kontostand) {
+		super(name, kontostand);
+		kontonummer = 1000 + anzahlkonten;
+		anzahlkonten++;
+	}
+}

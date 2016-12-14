@@ -1,0 +1,11 @@
+
+public class Test {
+
+	public static void main(String[] args) {
+		Bankkonto bankkonto1 = new Bankkonto("Stephanie", 99999.99);
+		bankkonto1.einzahlen(0.02);
+		bankkonto1.zeigeKontostand();
+
+	}
+
+}

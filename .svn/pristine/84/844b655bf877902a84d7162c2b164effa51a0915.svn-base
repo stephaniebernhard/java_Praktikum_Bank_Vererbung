@@ -1,0 +1,17 @@
+
+public class Test {
+
+	public static void main(String[] args) {
+		Bankkonto bankkonto1 = new Bankkonto("Stephanie", 99999.99);
+		bankkonto1.einzahlen(1.00);
+		bankkonto1.zeigeKontostand();
+		bankkonto1.zeigeName();
+		bankkonto1.zeigeKontoInfos();
+		bankkonto1.abheben(99900.0);
+		bankkonto1.zeigeKontoInfos();
+		bankkonto1.abheben(110.0);
+		bankkonto1.zeigeKontoInfos();
+
+	}
+
+}
